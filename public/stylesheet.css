@@ -1,0 +1,202 @@
+/* Makes the navbar elements align center, vertically */
+.navbar-nav {
+    align-items: center;
+}
+/* Changes font size of navbar elements to 20px */
+.nav-link{
+    font-size: 20px;
+}
+/* Uses flexbox to center the intro text horizontally */
+.intro-body {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* Uses flexbox to adjust size of intro container and align everything horizontally. */
+.intro-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+/* Uses flexbox to horizontally and vertical align child elements fpr intro class and displays them in direction: coloumn*/
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* Sets a custom font for intro slogan and adjusts margin-top */
+#introSlogan {
+    font-family:'Courier New', Courier, monospace;
+    margin-top: 30px;
+    text-align: center;
+}
+/* This class uses various styling to ensure the intro body text is the desired size, 
+the entire container is a certain width and everything is centered horizontally. */
+#introBody {
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: larger;
+    justify-content: center;
+    width: 75%;
+}
+/* Centres the logo horizontally */
+.logoContainer {
+    display: flex;
+    justify-content: center;
+}
+
+/* These CSS rules manipulate the carousel and its outer container to adjust it to a certain size
+and center it horizontally */
+.carousel-slide {
+    display: flex;
+    width: 75%;
+    max-width: 700px;
+    justify-content: center;
+}
+.slidshow-outer {
+    display: flex;
+    min-width: 400px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+/* Styles the shop button to be orange and a certain style, centered in the screen.  */
+.shop-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #feb300;
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+}
+
+.shop-button-container {
+    display: flex;
+    justify-content: center;
+}
+/* Adjusts font of all h2 and h4 elements linked to this stylesheet. */
+h2, h4 {
+    font-family:'Courier New', Courier, monospace;
+    margin-top: 30px;
+}
+
+/* Aligns the text and contact form heading class element horizontally. */
+.contact-form-heading {
+  text-align: center;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Contact form */
+/* Styles the various classes of the contact form to ensure its button is orange, it is a certain width and it is centered
+horizontally on the page. */
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #706e6e;
+  border-radius: 4px;   
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical; 
+}
+input[type=submit] {
+    background-color: #feb300;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact-form-container {
+    min-width: 500px;
+    border-radius: 4px;
+    padding: 30px;
+    background-color: #f2f2f2;
+    width: 60%;
+}
+.contact-form-parent {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 80%;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+}
+.contact {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background-color: #343a40;
+}
+.form-input {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+/* This class styles the trademark container to ensure it is centered horizontally with flex box. */
+.trademark-container {
+    display: flex;
+    justify-content: center;
+    background-color: #343a40;
+}
+
+.card {
+    padding-bottom: 30px;
+}
+.login-logo {
+    top: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+/* Ensures that any submit input changes to a darker orange when hovered over */
+input[type=submit]:hover, .shop-button:hover {
+    background-color: #c78d02;
+}
+
+/* Centers horizontally */
+.cart-container ,.checkout {
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling rules for the shopping cart page that ensure divs are centered horizontally
+and the correct margins are applied to ensure the elements are in the correct position. */
+#place-order-btn {
+    background-color: #feb300;
+    color: black;
+    margin-bottom: 200px;
+    margin-top: 10px;
+}
+#place-order-btn:hover {
+    background-color: #c78d02;
+}
+.confirmation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+.details-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+
+
+
+ 
+

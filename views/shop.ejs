@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>ProPPE Shop Page</title>
+	<meta charset="utf-8"  />
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+
+<body>
+    <!-- This block of HTML creates a responsive nav bar with bootstrap. It includes a logo
+  and some navigation links. It expands for larger screens and collapses for smaller screens.-->
+     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+          <div class="container-fluid">
+            <img class="navLogo" src="https://i.imgur.com/Ktl6Hdh.png" style="width: 120px;">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="/homepage.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" style="color: #feb300">Shop</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about.html">About</a>
+                </li>    
+              </ul>
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/cart.html">Shopping Cart</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="intro-container">
+          <div class="centered">
+              <h2 id="introSlogan">Browse Our Selection of PPE Products</h2>
+          </div>
+        </div>
+
+  <!-- This block of HTML uses bootstrap container and card classes to display 4 products that are injected 
+  when the page is rendered. The products are retrieved from a database in the node server - app.js 
+
+  On each click of add to cart, a javascript function stores the information in local storage.
+  -->
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <img src="<%= products[0].imageLink %>" class="card-img-top" alt="Product 1">
+                <div class="card-body">
+                  <h5 id="name1" class="card-title"><%= products[0].name %></h5>
+                  <p id="desc1" class="card-text"><%= products[0].description %></p>
+                  <p id="price1" class="card-text"><%= products[0].price %></p>
+                  <div class="quantity-selector">
+                    <label for="quan1">Quantity:</label>
+                    <select id="quan1" name="quantity2" class="form-select">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </div>
+                  <button onclick="addToCart(1)" class="btn btn-primary">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <img src="<%= products[1].imageLink %>" class="card-img-top" alt="Product 2">
+                <div class="card-body">
+                  <h5 id="name2" class="card-title"><%= products[1].name %></h5>
+                  <p id="desc2" class="card-text"><%= products[1].description %></p>
+                  <p id="price2" class="card-text"><%= products[1].price %></p>
+                  <div class="quantity-selector">
+                    <label for="quan2">Quantity:</label>
+                    <select id="quan2" name="quantity2" class="form-select">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </div>
+                  <button onclick="addToCart(2)" class="btn btn-primary">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <img src="<%= products[2].imageLink %>" class="card-img-top" alt="Product 3">
+                <div class="card-body">
+                  <h5 id="name3" class="card-title"><%= products[2].name %></h5>
+                  <p id="desc3" class="card-text"><%= products[2].description %></p>
+                  <p id="price3" class="card-text"><%= products[2].price %></p>
+                  <div class="quantity-selector">
+                    <label for="quan3">Quantity:</label>
+                    <select id="quan3" name="quantity2" class="form-select">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </div>
+                  <button onclick="addToCart(3)" class="btn btn-primary">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <img src="<%= products[3].imageLink %>" class="card-img-top" alt="Product 4">
+                <div class="card-body">
+                  <h5 id="name4" class="card-title"><%= products[3].name %></h5>
+                  <p id="desc4" class="card-text"><%= products[3].description %></p>
+                  <p id="price4" class="card-text"><%= products[3].price %></p>
+                  <div class="quantity-selector">
+                    <label for="quan4">Quantity:</label>
+                    <select id="quan4" name="quantity2" class="form-select">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </div>
+                  <button onclick="addToCart(4)" class="btn btn-primary">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      <!-- This HTML block displays a trademark banner on the bottom of the page-->
+      <div class="trademark-container">
+        <footer>
+          <p style="color: white; padding-top: 11px;">Copyright &copy; 2023 ProPPE</p>
+        </footer>
+        </div>
+      </div>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script>
+
+        // Based on which product was added to the card, it determines this with an if else block
+        // then it adds the product data to local storage, which will act as a basic shopping cart back end.
+         function addToCart(prodNum) {
+          let name, quan, price;
+          const productNumber = prodNum;
+          if (productNumber === 1) {
+            name = document.getElementById("name1").innerHTML;
+            quan = document.getElementById("quan1").value;
+            price = document.getElementById("price1").innerHTML;
+          } else if (productNumber === 2) {
+            name = document.getElementById("name2").innerHTML;
+            quan = document.getElementById("quan2").value;
+            price = document.getElementById("price2").innerHTML;
+          } else if (productNumber === 3) {
+            name = document.getElementById("name3").innerHTML;
+            quan = document.getElementById("quan3").value;
+            price = document.getElementById("price3").innerHTML;
+          } else {
+            name = document.getElementById("name4").innerHTML;
+            quan = document.getElementById("quan4").value;
+            price = document.getElementById("price4").innerHTML;
+          }
+          let product = { 'name': name, 'quantity': quan, 'price': price };
+          //localStorage.test = quan;
+          localStorage.setItem(name, JSON.stringify(product));
+          alert("Added!")
+         }
+        </script>
+</body>
+</html>
